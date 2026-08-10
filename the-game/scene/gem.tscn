@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c2jed1j8qhctj"]
+
+[ext_resource type="Texture2D" uid="uid://28rgksslgl6v" path="res://collectible/gemYellow.png" id="1_drhme"]
+[ext_resource type="Script" uid="uid://xomxy8p0ne3f" path="res://scripts/gem.gd" id="1_rl2rh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ia211"]
+radius = 13.0
+
+[node name="gem" type="Area2D" unique_id=251591873]
+position = Vector2(24, 20)
+collision_layer = 4
+script = ExtResource("1_rl2rh")
+
+[node name="GemYellow" type="Sprite2D" parent="." unique_id=2053117500]
+texture = ExtResource("1_drhme")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1925018302]
+shape = SubResource("CircleShape2D_ia211")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
