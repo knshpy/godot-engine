@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ductqibuu0gxc"]
+
+[ext_resource type="PackedScene" uid="uid://ud7ahngherix" path="res://scene/dead.tscn" id="1_brvut"]
+[ext_resource type="PackedScene" uid="uid://cx821rt5s3ijn" path="res://scene/character.tscn" id="1_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://22cs4ycu4ojl" path="res://node_2d.tscn" id="2_brvut"]
+[ext_resource type="PackedScene" uid="uid://c2jed1j8qhctj" path="res://scene/gem.tscn" id="3_0ha60"]
+[ext_resource type="PackedScene" uid="uid://cdhgkw17ex8qc" path="res://scene/background.tscn" id="5_0ha60"]
+
+[node name="Main" type="Node2D" unique_id=151167777]
+position = Vector2(10, -2)
+metadata/_edit_horizontal_guides_ = [740.0]
+
+[node name="background" parent="." unique_id=75293652 instance=ExtResource("5_0ha60")]
+
+[node name="character" parent="." unique_id=1050840235 instance=ExtResource("1_wp4xf")]
+position = Vector2(27, 457)
+
+[node name="tile_map" parent="." unique_id=457325749 instance=ExtResource("2_brvut")]
+
+[node name="dead" parent="." unique_id=1569530826 instance=ExtResource("1_brvut")]
+position = Vector2(-2, 10)
+
+[node name="gem" parent="." unique_id=251591873 instance=ExtResource("3_0ha60")]
+position = Vector2(1134, 548)

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cdhgkw17ex8qc"]
+
+[ext_resource type="Texture2D" uid="uid://d1aleiydtxv0u" path="res://assets/1.webp" id="1_jirmm"]
+
+[node name="background" type="Node2D" unique_id=75293652]
+
+[node name="1" type="Sprite2D" parent="." unique_id=713200932]
+position = Vector2(575, 327)
+scale = Vector2(2.4833333, 2.4)
+texture = ExtResource("1_jirmm")
