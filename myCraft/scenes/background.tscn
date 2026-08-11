@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cdhgkw17ex8qc"]
+
+[ext_resource type="Texture2D" uid="uid://dulko2xm1pqrv" path="res://assets/360_F_599720625_N2U8AQzhS5y7llrp2AMAQmKL4B6nWHKT.jpg" id="1_bkp1e"]
+
+[node name="background" type="Node2D" unique_id=452432874]
+
+[node name="360F599720625N2u8aQzhS5y7Llrp2amaQmKl4b6nWhkt" type="Sprite2D" parent="." unique_id=51872947]
+position = Vector2(575.50006, 324.00003)
+scale = Vector2(1.8043818, 1.8000001)
+texture = ExtResource("1_bkp1e")
