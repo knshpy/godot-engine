@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://db71d2pxdes1n"]
+
+[ext_resource type="Script" uid="uid://cq0nqgcpmitg7" path="res://scripts/gem.gd" id="1_knnat"]
+[ext_resource type="Texture2D" uid="uid://bgmkkdrulng3n" path="res://assets/gemBlue.png" id="2_rxk1d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rxk1d"]
+radius = 16.03122
+
+[node name="gem" type="Area2D" unique_id=1039301269]
+script = ExtResource("1_knnat")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1958145311]
+shape = SubResource("CircleShape2D_rxk1d")
+
+[node name="GemBlue" type="Sprite2D" parent="." unique_id=793967842]
+texture = ExtResource("2_rxk1d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

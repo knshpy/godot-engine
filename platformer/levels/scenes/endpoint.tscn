@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dugf8nm4q2ij3"]
+
+[ext_resource type="Script" uid="uid://c5wc3mfpyfey5" path="res://scripts/endpoint.gd" id="1_slv2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eu0bu"]
+size = Vector2(51, 44)
+
+[node name="endpoint" type="Area2D" unique_id=1270450140]
+script = ExtResource("1_slv2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1500844374]
+shape = SubResource("RectangleShape2D_eu0bu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
