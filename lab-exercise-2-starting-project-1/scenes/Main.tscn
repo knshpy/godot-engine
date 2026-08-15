@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://uh782kaw35l6"]
+
+[ext_resource type="Script" uid="uid://cbvvr4u6peuxd" path="res://scripts/Main.gd" id="1_elqb8"]
+[ext_resource type="PackedScene" uid="uid://derticstgib6n" path="res://scenes/Level.tscn" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://cv6ucs1fb0xdx" path="res://scenes/Player.tscn" id="3_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://dgvie53g8ngh4" path="res://scenes/spikes.tscn" id="4_rarhs"]
+[ext_resource type="PackedScene" uid="uid://0mmvwljn0by1" path="res://scenes/killzone.tscn" id="5_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://c8cj640gnvchh" path="res://scenes/diamond.tscn" id="6_c01mt"]
+[ext_resource type="PackedScene" uid="uid://bkp7l2gldqjpo" path="res://scenes/coin.tscn" id="7_nxtc6"]
+
+[node name="Main" type="Node2D" unique_id=125227678]
+script = ExtResource("1_elqb8")
+
+[node name="Player" parent="." unique_id=459160403 instance=ExtResource("3_0bbpv")]
+position = Vector2(43, 398)
+collision_mask = 2
+
+[node name="Level" parent="." unique_id=1647226146 instance=ExtResource("2_rvslj")]
+
+[node name="spikes" parent="." unique_id=2074478910 instance=ExtResource("4_rarhs")]
+
+[node name="killzone" parent="." unique_id=140252863 instance=ExtResource("5_vcsgt")]
+position = Vector2(0, -1)
+
+[node name="diamond" parent="." unique_id=247971944 instance=ExtResource("6_c01mt")]
+position = Vector2(245, 188)
+
+[node name="diamond2" parent="." unique_id=2074266311 instance=ExtResource("6_c01mt")]
+position = Vector2(454, 255)
+
+[node name="diamond3" parent="." unique_id=1991046850 instance=ExtResource("6_c01mt")]
+position = Vector2(803, 178)
+
+[node name="coin" parent="." unique_id=1392209096 instance=ExtResource("7_nxtc6")]
+position = Vector2(528, 108)
+
+[node name="coin2" parent="." unique_id=98444042 instance=ExtResource("7_nxtc6")]
+position = Vector2(565, 375)
+
+[node name="coin3" parent="." unique_id=1818282696 instance=ExtResource("7_nxtc6")]
+position = Vector2(1010, 312)

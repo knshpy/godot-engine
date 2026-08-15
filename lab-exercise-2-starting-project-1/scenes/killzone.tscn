@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://0mmvwljn0by1"]
+
+[ext_resource type="Script" uid="uid://c80k7q2ejpc7n" path="res://scripts/killzone.gd" id="1_kl8fp"]
+[ext_resource type="PackedScene" uid="uid://dgvie53g8ngh4" path="res://scenes/spikes.tscn" id="2_j2mit"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ia211"]
+size = Vector2(40, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ue65"]
+size = Vector2(123.5, 22.5)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ia211"]
+normal = Vector2(-0.0035335468, -0.99999374)
+distance = -554.9966
+
+[node name="killzone" type="Area2D" unique_id=140252863]
+script = ExtResource("1_kl8fp")
+
+[node name="spikes" parent="." unique_id=2074478910 instance=ExtResource("2_j2mit")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1737267191]
+position = Vector2(523, 410)
+shape = SubResource("RectangleShape2D_ia211")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1698661560]
+position = Vector2(980.25, 408.75)
+shape = SubResource("RectangleShape2D_8ue65")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1194622084]
+shape = SubResource("WorldBoundaryShape2D_ia211")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

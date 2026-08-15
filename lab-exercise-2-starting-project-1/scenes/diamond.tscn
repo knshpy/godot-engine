@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c8cj640gnvchh"]
+
+[ext_resource type="Script" uid="uid://bavpefriiirt0" path="res://scripts/diamond.gd" id="1_okr8r"]
+[ext_resource type="Texture2D" uid="uid://c5atcwksqiire" path="res://assets/collectibles/gemBlue.png" id="2_bd64o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ia211"]
+radius = 18.0
+
+[node name="diamond" type="Area2D" unique_id=247971944]
+script = ExtResource("1_okr8r")
+
+[node name="GemBlue" type="Sprite2D" parent="." unique_id=1474937085]
+position = Vector2(0, 3)
+texture = ExtResource("2_bd64o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=77668593]
+shape = SubResource("CircleShape2D_ia211")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

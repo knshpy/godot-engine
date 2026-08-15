@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Lab-exercise-2-starting-project"
+run/main_scene="uid://uh782kaw35l6"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1120
+window/size/viewport_height=630
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "yellow",
+"res://assets/collectibles/": "pink",
+"res://assets/obstacles/": "red",
+"res://assets/tileset/": "purple",
+"res://scenes/": "gray",
+"res://scripts/": "gray"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+2d/default_gravity=2200.0
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
