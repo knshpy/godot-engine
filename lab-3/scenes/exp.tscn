@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c3soahuns5b4b"]
+
+[ext_resource type="Texture2D" uid="uid://cqwkskis4k1in" path="res://assets/tile_0022.png" id="1_1m54x"]
+[ext_resource type="Script" uid="uid://bejqug5na4a0r" path="res://scripts/exp.gd" id="1_7gp3u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpsk0"]
+radius = 5.0
+
+[node name="exp" type="Area2D" unique_id=1754040012]
+script = ExtResource("1_7gp3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=237941566]
+shape = SubResource("CircleShape2D_kpsk0")
+
+[node name="exp" type="Sprite2D" parent="." unique_id=1390355147]
+texture = ExtResource("1_1m54x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

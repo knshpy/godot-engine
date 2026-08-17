@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://big83eynipwps"]
+
+[ext_resource type="Texture2D" uid="uid://d1uifudta3ypa" path="res://player/Basic Charakter Spritesheet.png" id="1_agfs1"]
+[ext_resource type="Script" uid="uid://ca1vxxi1h4aac" path="res://scripts/character.gd" id="1_rkhd4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agfs1"]
+atlas = ExtResource("1_agfs1")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkhd4"]
+atlas = ExtResource("1_agfs1")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrhn5"]
+atlas = ExtResource("1_agfs1")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_my7n2"]
+atlas = ExtResource("1_agfs1")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp8ca"]
+atlas = ExtResource("1_agfs1")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lw5n"]
+atlas = ExtResource("1_agfs1")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cgup"]
+atlas = ExtResource("1_agfs1")
+region = Rect2(144, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eu0bu"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agfs1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkhd4")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrhn5")
+}],
+"loop": 1,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_my7n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp8ca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lw5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cgup")
+}],
+"loop": 1,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eu0bu"]
+radius = 7.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_rkhd4"]
+font_size = 12
+font_color = Color(1, 0.54889005, 0.98934406, 1)
+stacked_outline_count = 1
+
+[node name="character" type="CharacterBody2D" unique_id=1023243575]
+script = ExtResource("1_rkhd4")
+
+[node name="bunny" type="AnimatedSprite2D" parent="." unique_id=2081601232]
+position = Vector2(0, 1)
+sprite_frames = SubResource("SpriteFrames_eu0bu")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1316005364]
+shape = SubResource("CircleShape2D_eu0bu")
+
+[node name="exp_label" type="Label" parent="." unique_id=283202772]
+offset_left = -12.0
+offset_top = -27.0
+offset_right = 15.0
+offset_bottom = -4.0
+label_settings = SubResource("LabelSettings_rkhd4")
