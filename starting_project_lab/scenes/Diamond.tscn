@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://doa0ggf8fcrdk"]
+
+[ext_resource type="Texture2D" uid="uid://cr7334o0tqmnf" path="res://assets/items/gemBlue.png" id="1_jf3mh"]
+[ext_resource type="Script" uid="uid://b0glmbjo11hcv" path="res://scripts/CollectibleItem.gd" id="1_ra6u1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3x7k6"]
+radius = 18.0
+
+[node name="Diamond" type="Area2D" unique_id=1896015363]
+script = ExtResource("1_ra6u1")
+points = 10
+metadata/_custom_type_script = "uid://b0glmbjo11hcv"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=145287498]
+texture = ExtResource("1_jf3mh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1152287021]
+shape = SubResource("CircleShape2D_3x7k6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

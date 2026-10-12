@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://buqw4b6d38b3c"]
+
+[ext_resource type="PackedScene" uid="uid://csrxkpv8hbr1" path="res://scenes/Level1.tscn" id="1_elqb8"]
+[ext_resource type="Script" uid="uid://dyj3e0h88ju0e" path="res://scripts/Main.gd" id="1_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://dye58hngneco7" path="res://scenes/Player.tscn" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://b05w8rpi4ld7j" path="res://scenes/KillZone.tscn" id="3_0bbpv"]
+[ext_resource type="PackedScene" uid="uid://ccw2ijavuy6g1" path="res://scenes/Coin.tscn" id="4_rarhs"]
+[ext_resource type="PackedScene" uid="uid://doa0ggf8fcrdk" path="res://scenes/Diamond.tscn" id="6_c01mt"]
+[ext_resource type="PackedScene" uid="uid://d1madeh1555x6" path="res://scenes/GameHUD.tscn" id="7_nxtc6"]
+[ext_resource type="PackedScene" uid="uid://bdpjoq0krosqn" path="res://scenes/game_over.tscn" id="8_jlsqs"]
+
+[node name="Main" type="Node2D" unique_id=1492473892]
+script = ExtResource("1_vcsgt")
+
+[node name="Level1" parent="." unique_id=253443256 instance=ExtResource("1_elqb8")]
+
+[node name="Player" parent="." unique_id=1757756397 instance=ExtResource("2_rvslj")]
+position = Vector2(58, 330)
+
+[node name="KillZone" parent="." unique_id=560605465 instance=ExtResource("3_0bbpv")]
+position = Vector2(629, 792)
+
+[node name="Coin" parent="." unique_id=67115504 instance=ExtResource("4_rarhs")]
+position = Vector2(418, 260)
+
+[node name="Diamond" parent="." unique_id=1110198548 instance=ExtResource("6_c01mt")]
+position = Vector2(696, 85)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=102462431]
+
+[node name="GameHUD" parent="CanvasLayer" unique_id=1862598428 instance=ExtResource("7_nxtc6")]
+offset_left = -3.0
+offset_top = 1.0
+offset_right = -3.0
+offset_bottom = 1.0
+
+[node name="GameOver" parent="CanvasLayer" unique_id=922135166 instance=ExtResource("8_jlsqs")]
+visible = false
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 9.0
+offset_bottom = 2.0
+
+[connection signal="on_item_collected" from="Coin" to="." method="_on_coin_on_item_collected"]
+[connection signal="on_item_collected" from="Diamond" to="." method="_on_coin_on_item_collected"]

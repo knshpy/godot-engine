@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bdpjoq0krosqn"]
+
+[ext_resource type="Script" uid="uid://bcrcm12qnclje" path="res://scripts/restart.gd" id="1_xeevv"]
+
+[node name="GameOver" type="Control" unique_id=922135166]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2027576269]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=433644525]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=339378676]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=1032066875]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=277752311]
+layout_mode = 2
+text = "GAME OVER!"
+
+[node name="Restart" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=747830102]
+layout_mode = 2
+size_flags_vertical = 4
+text = "RESTART!
+"
+script = ExtResource("1_xeevv")
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Restart" to="CenterContainer/PanelContainer/VBoxContainer/Restart" method="_on_pressed"]

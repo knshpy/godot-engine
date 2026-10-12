@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dsn5denp2k5u7"]
+
+[ext_resource type="Texture2D" uid="uid://befyg812b3jno" path="res://assets/hud/hud_heartFull.png" id="1_6w74t"]
+[ext_resource type="Script" uid="uid://eb4fob8fhv5e" path="res://scripts/LifeIndicator.gd" id="2_p1pm0"]
+
+[node name="LifeIndicator" type="TextureRect" unique_id=286748986]
+texture = ExtResource("1_6w74t")
+script = ExtResource("2_p1pm0")
